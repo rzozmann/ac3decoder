@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.zoz.ac3.decoder
+Bundle-Name: %nameBundle
+Bundle-SymbolicName: org.zoz.ac3.decoder;singleton:=true
+Bundle-Version: 1.0.0
+Eclipse-BundleShape: jar
+Export-Package: org.zoz.ac3.decoder.cli,
+ org.zoz.ac3.decoder.spi
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ClassPath: .
+Bundle-Vendor: Ralf Zozmann
+Bundle-Localization: plugin
