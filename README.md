@@ -1,7 +1,7 @@
 # AC-3 Java Sound SPI
 
 A pure Java AC-3 (Dolby Digital) decoder implemented from **ATSC A/52:2018**
-(`A52-2018.pdf`). It plugs into `javax.sound.sampled` as a service provider, so any
+(`doc/A52-2018.pdf`). It plugs into `javax.sound.sampled` as a service provider, so any
 Java Sound application can open and play `.ac3` files. There are no runtime dependencies.
 
 ```java

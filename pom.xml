@@ -14,6 +14,13 @@
     	Pure Java AC-3 (Dolby Digital) decoder implemented after ATSC A/52:2018, exposed as a javax.sound.sampled service provider (AudioFileReader + FormatConversionProvider).
     </description>
 
+	<licenses>
+	    <license>
+	      <name>MIT License</name>
+	      <url>https://opensource.org/license/MIT</url>
+	    </license>
+	</licenses>
+  
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,7 +41,6 @@
     </dependencies>
 
     <build>
-    
 	    <pluginManagement>
 	      <plugins>
 	        <plugin>
@@ -105,11 +111,42 @@
                     </archive>
                 </configuration>
             </plugin>
-            <!--plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>3.1.2</version>
-            </plugin-->
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-javadoc-plugin</artifactId>
+			    <version>3.12.0</version>
+			    <executions>
+			      <execution>
+			        <goals>
+			          <goal>jar</goal>
+			        </goals>
+			      </execution>
+			    </executions>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-source-plugin</artifactId>
+			    <version>3.4.0</version>
+			    <executions>
+			      <execution>
+			        <goals>
+			          <goal>jar-no-fork</goal>
+			        </goals>
+			      </execution>
+			    </executions>
+			</plugin>            
         </plugins>
     </build>
+    
+	<distributionManagement>
+	   <!-- repository configuration to deploy to maven central-->
+	    <repository>
+	    	<id>repo-oss.sonatype.org</id>
+	    	<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+	    </repository>
+	    <snapshotRepository>
+	    	<id>repo-oss.sonatype.org</id>
+	    	<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	    </snapshotRepository>
+	</distributionManagement>    
 </project>
