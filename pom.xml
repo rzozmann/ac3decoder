@@ -169,14 +169,17 @@
 	</profiles>
 
 	<distributionManagement>
-	   <!-- repository configuration to deploy to maven central-->
-	    <repository>
+	    <!--repository>
 	    	<id>repo-oss.sonatype.org</id>
 	    	<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-	    </repository>
-	    <snapshotRepository>
-	    	<id>repo-oss.sonatype.org</id>
-	    	<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-	    </snapshotRepository>
-	</distributionManagement>    
+	    </repository-->
+        <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/rzozmann/ac3decoder</url>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>	    
+	</distributionManagement>
+
 </project>

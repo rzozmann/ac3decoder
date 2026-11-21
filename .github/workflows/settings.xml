@@ -2,7 +2,7 @@
 <settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"
           xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <servers>
+    <!-- servers>
         <server>
             <id>repo-oss.sonatype.org</id>
             <username>${env.MAVEN_USERNAME}</username>
@@ -20,5 +20,5 @@
 	        <gpg.passphrase>${env.MAVEN_GPG_PASSPHRASE}</gpg.passphrase>
 	      </properties>
 	    </profile>
-    </profiles>
+    </profiles-->
 </settings> 
