@@ -11,6 +11,28 @@ AudioFormat pcm = new AudioFormat(ac3.getFormat().getSampleRate(), 16,
 AudioInputStream decoded = AudioSystem.getAudioInputStream(pcm, ac3);   // -> SourceDataLine, WAV, ...
 ```
 
+## Usage
+Configure a maven repository containing the binary artifacts, here github registry is used (and the only existing publishing target):
+```
+	<distributionManagement>
+        <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/rzozmann/ac3decoder</url>
+        </repository>	    
+	</distributionManagemen
+```
+Consume the decoder as Maven dependency:
+```
+	<dependencies>
+	 <dependency>
+	    <groupId>org.zoz</groupId>
+	    <artifactId>ac3.decoder</artifactId>
+	    <version>...</version>
+	  </dependency>
+	</dependencies>
+```
+The archive can be used as OSGi bundle.
+
 ## Build and run
 
 ```bash
