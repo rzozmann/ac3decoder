@@ -26,5 +26,5 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
-		  GITHUB_USER: ${{ secrets.ACCESS_USER }}
+          GITHUB_USER: ${{ secrets.ACCESS_USER }}
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
